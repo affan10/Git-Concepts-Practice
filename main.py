@@ -18,8 +18,10 @@ def list_comprehension_even_numbers(list):
     # Check if list is not empty
     if list:
         # Floor divide by 2 and then add 10 to all odd numbers
-        return [ (x//2) + 10 for x in list if x % 2 != 0 ]
+        temp_list = [ x//2 for x in list]
+        add_10_func = lambda x: x + 10
+        return map(add_10_func, temp_list)
     return "List does not exists!"
 
 
-print(list_comprehension_even_numbers(main_list))
+print(list(list_comprehension_even_numbers(main_list)))
