@@ -17,14 +17,8 @@ def list_comprehension_even_numbers(list):
     # For rebasing practice
     # Check if list is not empty
     if list:
-<<<<<<< HEAD
-        # Floor divide by 2 all odd numbers
-        temp_list = [ x // 2 for x in list if x % 2 != 0]
-        return temp_list
-=======
         # Floor divide by 2 and then add 10 to all odd numbers
         return [ (x//2) + 10 for x in list if x % 2 != 0 ]
->>>>>>> updated to add 10 to odd numbers
     return "List does not exists!"
 
 
