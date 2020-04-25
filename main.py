@@ -6,9 +6,11 @@ def list_comprehension_squared(list):
     # Check if list is not empty
     if list:
         # Quadruple all numbers
-        return [x**4 for x in list]
+        temp_list = [x**4 for x in list]
+        func = lambda x: x + 10
+        return map(func, temp_list)
 
-print(list_comprehension_squared(main_list))
+print(list(list_comprehension_squared(main_list)))
 
 # Return even numbers only
 def list_comprehension_even_numbers(list):
@@ -16,7 +18,8 @@ def list_comprehension_even_numbers(list):
     # Check if list is not empty
     if list:
         # Floor divide by 2 all odd numbers
-        return [x//2 for x in list if x % 2 != 0]
+        temp_list = [ x // 2 for x in list if x % 2 != 0]
+        return temp_list
     return "List does not exists!"
 
 print(list_comprehension_even_numbers(main_list))
