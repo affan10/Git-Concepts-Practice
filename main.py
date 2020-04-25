@@ -1,4 +1,4 @@
-main_list = [10, 12, 13, 20, 15, 27, 18, 29, 42]
+main_list = [10, 12, 13, 43, 20, 15, 27, 18, 29, 42]
 
 # Simple squaring of all elements of main_list
 def list_comprehension_squared(list):
@@ -28,6 +28,8 @@ print(list(list_comprehension_even_numbers(main_list)))
 
 
 def yet_another_func(list):
-    return sorted(list)
+    sorted_list = sorted(list)
+    greater_than_25 = lambda x: x > 25
+    return filter(greater_than_25, sorted_list)
 
-print(yet_another_func(main_list))
+print(list(yet_another_func(main_list)))
