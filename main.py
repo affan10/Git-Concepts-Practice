@@ -6,8 +6,8 @@ def list_comprehension_squared(list):
 
 print(list_comprehension_squared(main_list))
 
-# Only square those elements that are even
-def list_comprehension_squared_even(list):
-    return [x**2 for x in list if x % 2 == 0]
+# Return even numbers only
+def list_comprehension_even_numbers(list):
+    return [x for x in list if x % 2 == 0]
 
-print(list_comprehension_squared_even(main_list))
+print(list_comprehension_even_numbers(main_list))
